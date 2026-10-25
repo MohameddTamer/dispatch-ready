@@ -1,4 +1,4 @@
-# Security — Dispatch Ready
+# Security, Dispatch Ready
 
 Local demo posture, stated plainly. This version runs on one machine at one
 station gate; it is not hardened for the public internet.
@@ -10,7 +10,7 @@ station gate; it is not hardened for the public internet.
   role is read-only; admin-only routes (backup) refuse it.
 - The gate rule is enforced in the backend, not the page: a departure request
   with an incomplete checklist is refused with the blocker list attached, and
-  a phone percentage outside 0–100 is rejected outright.
+  a phone percentage outside 0 to 100 is rejected outright.
 - All SQL is parameterised. Errors are structured JSON; no stack traces or
   SQL leak through the API.
 - CSV import is capped, validates its header as a whole, and names duplicate
